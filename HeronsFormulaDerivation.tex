@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\begin{document}
+	The goal of Heron's formula is to get the area of a triangle given three sides. We will start with the formula $[ABC] = \frac{1}{2}ab \sin C$. The law of sines isn't useful here, because we would be introducing the cirucmradius, a value that we don't know. Let's try the law of cosines:
+	
+	$$
+	\sin C = \sqrt{1 - \cos^2 C}
+	$$
+	
+	$$
+	[ABC] = \frac{1}{2} ab \sin C = \frac{ab}{2} \sqrt{1-\cos^2 C}
+	$$
+	
+	$$
+	= \frac{ab}{2} \sqrt{1-\frac{(c^2-a^2-b^2)^2}{(2ab)^2}} = \frac{ab}{2} \sqrt{1 -\frac{(c^2-a^2-b^2)^2}{4a^2b^2}}
+	$$
+	
+	$$
+	= \sqrt{\frac{a^2b^2}{4} \left( 1 - \frac{(c^2-a^2-b^2)^2}{4a^2b^2} \right)} = \sqrt{\frac{a^2b^2}{4} - \frac{(c^2-a^2-b^2)^2}{16}}
+	$$
+	
+	$$
+	= \sqrt{\frac{4a^2b^2 - (c^2-a^2-b^2)^2}{16}} = \sqrt{\frac{(2ab-c^2+a^2+b^2)(2ab+c^2-a^2-b^2)}{16}}
+	$$
+	
+	$$
+	=\sqrt{\frac{[(a+b)^2-c^2][c^2-(a-b)^2]}{16}} = \sqrt{\frac{(a+b-c)(a+b+c)(a-b+c)(-a+b+c)}{16}}
+	$$
+	
+	Using $s = \frac{a+b+c}{2}$ as the semiperimeter, we finally have Heron's formula:
+	
+	$$
+	[ABC] = \sqrt{s(s-a)(s-b)(s-c)}
+	$$
+	
+	
+\end{document}
